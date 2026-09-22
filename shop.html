@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VOLTIX | Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            VOLT<span>IX</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="new.html">New Arrivals</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <div class="nav-search">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button id="searchBtn">⌕</button>
+            </div>
+
+            <button class="icon-btn" id="wishlistBtn">
+                ♡
+            </button>
+
+            <button class="cart-btn" id="cartBtn">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+    </header>
+
+
+    <!-- SHOP HERO -->
+    <section class="shop-hero">
+
+        <div>
+            <span class="small-title">VOLTIX STORE</span>
+
+            <h1>
+                Upgrade Your
+                <span>Tech.</span>
+            </h1>
+
+            <p>
+                Premium chargers, earbuds, headphones and accessories
+                designed for your everyday life.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- SHOP CONTROLS -->
+    <section class="shop-section">
+
+        <div class="shop-top">
+
+            <div>
+                <span class="products-label">OUR COLLECTION</span>
+                <h2>Shop Products</h2>
+            </div>
+
+            <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name: A-Z</option>
+            </select>
+
+        </div>
+
+
+        <!-- CATEGORY FILTERS -->
+        <div class="categories">
+
+            <button class="category active" data-category="All">
+                All
+            </button>
+
+            <button class="category" data-category="Chargers">
+                Chargers
+            </button>
+
+            <button class="category" data-category="Earbuds">
+                Earbuds
+            </button>
+
+            <button class="category" data-category="Headphones">
+                Headphones
+            </button>
+
+            <button class="category" data-category="Cables">
+                Cables
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid" id="productGrid">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card"
+                 data-name="Voltix 65W Fast Charger"
+                 data-category="Chargers"
+                 data-price="3499">
+
+                <div class="product-image charger">
+                    <span class="badge">SALE</span>
+
+                    <button class="heart">♡</button>
+
+                    <div class="charger-shape">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+
+                    <small>CHARGERS</small>
+
+                    <h3>Voltix 65W Fast Charger</h3>
+
+                    <p>
+                        Super fast USB-C power adapter.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 3,499</strong>
+                        <del>Rs. 4,999</del>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product-card"
+                 data-name="AirBeat Pro Earbuds"
+                 data-category="Earbuds"
+                 data-price="5999">
+
+                <div class="product-image earbuds">
+
+                    <span class="badge new">NEW</span>
+
+                    <button class="heart">♡</button>
+
+                    <div class="earbud-left"></div>
+                    <div class="earbud-right"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>EARBUDS</small>
+
+                    <h3>AirBeat Pro Earbuds</h3>
+
+                    <p>
+                        Wireless sound with deep bass.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 5,999</strong>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card"
+                 data-name="Voltix Ultra Headphones"
+                 data-category="Headphones"
+                 data-price="8499">
+
+                <div class="product-image headphones">
+
+                    <button class="heart">♡</button>
+
+                    <div class="headphone">
+                        <div class="cup left"></div>
+                        <div class="cup right"></div>
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>HEADPHONES</small>
+
+                    <h3>Voltix Ultra Headphones</h3>
+
+                    <p>
+                        Premium wireless noise cancellation.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 8,499</strong>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card"
+                 data-name="Type-C Power Cable"
+                 data-category="Cables"
+                 data-price="1299">
+
+                <div class="product-image cable">
+
+                    <button class="heart">♡</button>
+
+                    <div class="cable-shape"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>CABLES</small>
+
+                    <h3>Type-C Power Cable</h3>
+
+                    <p>
+                        Strong braided fast charging cable.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 1,299</strong>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div class="product-card"
+                 data-name="Voltix 100W GaN Charger"
+                 data-category="Chargers"
+                 data-price="6499">
+
+                <div class="product-image charger">
+
+                    <span class="badge new">NEW</span>
+
+                    <button class="heart">♡</button>
+
+                    <div class="charger-shape big">
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>CHARGERS</small>
+
+                    <h3>Voltix 100W GaN Charger</h3>
+
+                    <p>
+                        Compact high-power GaN charging.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 6,499</strong>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div class="product-card"
+                 data-name="AirBeat Lite Buds"
+                 data-category="Earbuds"
+                 data-price="3999">
+
+                <div class="product-image earbuds">
+
+                    <button class="heart">♡</button>
+
+                    <div class="earbud-left"></div>
+                    <div class="earbud-right"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>EARBUDS</small>
+
+                    <h3>AirBeat Lite Buds</h3>
+
+                    <p>
+                        Lightweight wireless earbuds.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 3,999</strong>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+            <div class="product-card"
+                 data-name="Voltix Bass Max"
+                 data-category="Headphones"
+                 data-price="7499">
+
+                <div class="product-image headphones">
+
+                    <button class="heart">♡</button>
+
+                    <div class="headphone">
+                        <div class="cup left"></div>
+                        <div class="cup right"></div>
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>HEADPHONES</small>
+
+                    <h3>Voltix Bass Max</h3>
+
+                    <p>
+                        Powerful bass with premium comfort.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 7,499</strong>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+            <div class="product-card"
+                 data-name="Fast Charge USB Cable"
+                 data-category="Cables"
+                 data-price="999">
+
+                <div class="product-image cable">
+
+                    <button class="heart">♡</button>
+
+                    <div class="cable-shape"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>CABLES</small>
+
+                    <h3>Fast Charge USB Cable</h3>
+
+                    <p>
+                        Durable cable for everyday charging.
+                    </p>
+
+                    <div class="price">
+                        <strong>Rs. 999</strong>
+                    </div>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NO PRODUCTS -->
+        <div class="no-products" id="noProducts">
+            <h3>No products found</h3>
+            <p>Try another search or category.</p>
+        </div>
+
+    </section>
+
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay">
+
+        <div class="cart-panel">
+
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button id="closeCart">×</button>
+            </div>
+
+            <div id="cartItems" class="cart-items">
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+            </div>
+
+            <div class="cart-footer">
+
+                <div>
+                    <span>Total</span>
+                    <strong id="cartTotal">Rs. 0</strong>
+                </div>
+
+                <button class="checkout-btn">
+                    Checkout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Added to cart ✓
+    </div>
+
+
+    <script src="shop.js"></script>
+
+</body>
+</html>

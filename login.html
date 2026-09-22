@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VOLTIX — Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Glow -->
+    <div class="bg-glow glow-one"></div>
+    <div class="bg-glow glow-two"></div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            VOLT<span>IX</span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </header>
+
+
+    <!-- Login Section -->
+    <main class="login-section">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                <div class="logo-circle">
+                    V
+                </div>
+            </div>
+
+            <p class="welcome">WELCOME BACK</p>
+
+            <h1>Sign In</h1>
+
+            <p class="subtitle">
+                Login to your VOLTIX account
+            </p>
+
+
+            <form id="loginForm">
+
+                <!-- Email -->
+                <div class="input-group">
+
+                    <label>Email Address</label>
+
+                    <div class="input-box">
+
+                        <span>✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <div class="password-label">
+
+                        <label>Password</label>
+
+                        <a href="#">Forgot Password?</a>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="showPassword"
+                            class="show-password">
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Remember -->
+                <div class="remember">
+
+                    <label>
+
+                        <input type="checkbox" id="remember">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button type="submit" class="login-submit">
+                    Sign In →
+                </button>
+
+            </form>
+
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR CONTINUE WITH</span>
+            </div>
+
+
+            <!-- Social Login -->
+            <div class="social-login">
+
+                <button class="social-btn">
+                    <strong>G</strong>
+                    Google
+                </button>
+
+                <button class="social-btn">
+                    <strong>f</strong>
+                    Facebook
+                </button>
+
+            </div>
+
+
+            <!-- Register -->
+            <p class="register-text">
+
+                Don't have an account?
+
+                <a href="#">
+                    Create Account
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 VOLTIX. All Rights Reserved.
+    </footer>
+
+
+    <script src="login.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    import {
+        getAuth,
+        GoogleAuthProvider,
+        FacebookAuthProvider,
+        signInWithPopup
+    } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT.firebasestorage.app",
+        messagingSenderId: "YOUR_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Google Login
+    document.querySelector(".social-btn.google").addEventListener("click", async () => {
+
+        const provider = new GoogleAuthProvider();
+
+        try {
+            const result = await signInWithPopup(auth, provider);
+
+            console.log("Google Login:", result.user);
+
+            alert("Google login successful! Welcome " + result.user.displayName);
+
+            window.location.href = "index.html";
+
+        } catch (error) {
+            console.error(error);
+            alert("Google Login Failed: " + error.message);
+        }
+    });
+
+
+    // Facebook Login
+    document.querySelector(".social-btn.facebook").addEventListener("click", async () => {
+
+        const provider = new FacebookAuthProvider();
+
+        try {
+            const result = await signInWithPopup(auth, provider);
+
+            console.log("Facebook Login:", result.user);
+
+            alert("Facebook login successful! Welcome " + result.user.displayName);
+
+            window.location.href = "index.html";
+
+        } catch (error) {
+            console.error(error);
+            alert("Facebook Login Failed: " + error.message);
+        }
+    });
+</script>
+
+<script src="login.js"></script>
+</body>
+</html>
