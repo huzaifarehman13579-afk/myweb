@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><i class="bi bi-lightning-charge-fill"></i>VOLTIX — Premium Electronics</title>
+
+    <link rel="stylesheet" href= "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        VOLT<span>IX</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="new.html">New Arrivals</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+            <button id="searchBtn">⌕</button>
+        </div>
+
+        <button class="icon-btn" id="wishlistBtn">
+            ♡
+        </button>
+
+        <button class="icon-btn cart-btn" id="cartBtn">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <a href="login.html" class="login-btn">Login</a>
+
+    </div>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">NEXT GENERATION TECH</p>
+
+        <h1>
+            POWER YOUR
+            <span>EVERYDAY.</span>
+        </h1>
+
+        <p class="hero-text">
+            Premium chargers, earbuds, headphones and accessories
+            designed for your everyday lifestyle.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#products" class="primary-btn">
+                Shop Now →
+            </a>
+
+            <a href="#categories" class="secondary-btn">
+                Explore
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-product">
+
+        <div class="glow"></div>
+
+        <div class="product-circle">
+            <div class="earbud left"></div>
+            <div class="earbud right"></div>
+            <div class="case"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories" id="categories">
+
+    <div class="section-heading">
+        <p>SHOP BY CATEGORY</p>
+        <h2>Find Your <span>Gear</span></h2>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card" data-category="Chargers">
+            <div class="category-icon">⚡</div>
+            <h3>Chargers</h3>
+            <p>Fast & powerful</p>
+        </div>
+
+        <div class="category-card" data-category="Earbuds">
+            <div class="category-icon">🎧</div>
+            <h3>Earbuds</h3>
+            <p>Immersive sound</p>
+        </div>
+
+        <div class="category-card" data-category="Headphones">
+            <div class="category-icon">🎵</div>
+            <h3>Headphones</h3>
+            <p>Premium audio</p>
+        </div>
+
+        <div class="category-card" data-category="Cables">
+            <div class="category-icon">🔌</div>
+            <h3>Cables</h3>
+            <p>Built to last</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading products-heading">
+
+        <div>
+            <p>OUR COLLECTION</p>
+            <h2>Featured <span>Products</span></h2>
+        </div>
+
+        <button class="view-all" id="viewAllBtn">
+            View All →
+        </button>
+
+    </div>
+
+
+    <div class="products-grid" id="productsGrid">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card" data-name="Voltix 65W Fast Charger" data-category="Chargers">
+
+            <div class="product-image">
+                <span class="sale">SALE</span>
+
+                <button class="heart">♡</button>
+
+                <div class="charger">
+                    <div class="charger-port"></div>
+                </div>
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">CHARGER</p>
+
+                <h3>Voltix 65W Fast Charger</h3>
+
+                <div class="rating">★★★★★ <span>(24)</span></div>
+
+                <div class="price">
+                    <strong>Rs. 3,499</strong>
+                    <del>Rs. 4,999</del>
+                </div>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card" data-name="AirBeat Pro Earbuds" data-category="Earbuds">
+
+            <div class="product-image">
+
+                <span class="new">NEW</span>
+
+                <button class="heart">♡</button>
+
+                <div class="earbuds-product">
+                    <div class="bud"></div>
+                    <div class="bud"></div>
+                    <div class="earbud-case"></div>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">AUDIO</p>
+
+                <h3>AirBeat Pro Earbuds</h3>
+
+                <div class="rating">★★★★★ <span>(41)</span></div>
+
+                <div class="price">
+                    <strong>Rs. 5,999</strong>
+                </div>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card" data-name="Voltix Ultra Headphones" data-category="Headphones">
+
+            <div class="product-image">
+
+                <button class="heart">♡</button>
+
+                <div class="headphones">
+                    <div class="headband"></div>
+                    <div class="cup left-cup"></div>
+                    <div class="cup right-cup"></div>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">HEADPHONES</p>
+
+                <h3>Voltix Ultra Headphones</h3>
+
+                <div class="rating">★★★★★ <span>(18)</span></div>
+
+                <div class="price">
+                    <strong>Rs. 8,499</strong>
+                </div>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card" data-name="Type-C Power Cable" data-category="Cables">
+
+            <div class="product-image">
+
+                <span class="new">NEW</span>
+
+                <button class="heart">♡</button>
+
+                <div class="cable">
+                    <div class="usb one"></div>
+                    <div class="wire"></div>
+                    <div class="usb two"></div>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">CABLE</p>
+
+                <h3>Type-C Power Cable</h3>
+
+                <div class="rating">★★★★★ <span>(36)</span></div>
+
+                <div class="price">
+                    <strong>Rs. 1,299</strong>
+                </div>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="no-results" id="noResults">
+        No products found.
+    </p>
+
+</section>
+
+
+<!-- ================= PROMO ================= -->
+
+<section class="promo">
+
+    <div>
+
+        <p>LIMITED TIME OFFER</p>
+
+        <h2>
+            Upgrade Your
+            <span>Tech Setup.</span>
+        </h2>
+
+        <p class="promo-text">
+            Get up to 30% off selected accessories.
+        </p>
+
+        <a href="#products" class="primary-btn">
+            Shop Deals →
+        </a>
+
+    </div>
+
+    <div class="promo-circle">
+        ⚡
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+        <span>🚚</span>
+        <div>
+            <h3>Fast Delivery</h3>
+            <p>Nationwide delivery</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span>🔒</span>
+        <div>
+            <h3>Secure Payment</h3>
+            <p>100% secure checkout</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span>↩</span>
+        <div>
+            <h3>Easy Returns</h3>
+            <p>Simple return policy</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span>✓</span>
+        <div>
+            <h3>Quality Products</h3>
+            <p>Premium quality gear</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <a href="#" class="logo">
+                VOLT<span>IX</span>
+            </a>
+
+            <p>
+                Premium technology and accessories
+                built for your everyday life.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+            <a href="#">Chargers</a>
+            <a href="#">Earbuds</a>
+            <a href="#">Headphones</a>
+            <a href="#">Cables</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 VOLTIX. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- ================= CART PANEL ================= -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart-panel">
+
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="closeCart">×</button>
+        </div>
+
+        <div id="cartItems">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cartTotal">Rs. 0</strong>
+        </div>
+
+        <button class="checkout-btn">
+            Checkout →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src=./script.js></script>
+
+</body>
+</html>
